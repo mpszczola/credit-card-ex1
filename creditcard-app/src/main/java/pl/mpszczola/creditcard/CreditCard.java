@@ -1,11 +1,21 @@
-package pl.mpszczola.creditcard;
-// moj komentarz
 class CreditCard {
-    public void assignLimit(double money){
-        
+    
+    private boolean blocked = false;
+    private double limit=0; 
+    
+    public void assignLimit(double money) {
+        this.limit=money;
     }
-    // get limit will retur current limit
-    public double getLimit(){
+    
+    public double getLimit() {
         return 2000;
+    }
+    
+    public void block() {
+        this.blocked = true;
+    }
+    
+    public boolean isBlocked() {
+        return this.blockade;
     }
 }
